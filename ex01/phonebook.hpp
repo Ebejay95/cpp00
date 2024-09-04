@@ -6,7 +6,7 @@
 /*   By: jeberle <jeberle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 13:36:39 by jeberle           #+#    #+#             */
-/*   Updated: 2024/09/04 14:20:09 by jeberle          ###   ########.fr       */
+/*   Updated: 2024/09/04 15:23:20 by jeberle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class PhoneBook
 {
 	private:
-		Contact contacts[8];
+		Contact contacts[CONTACT_MAX];
 	public:
 		PhoneBook();
 		~PhoneBook();
