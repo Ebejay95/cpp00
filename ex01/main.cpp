@@ -1,33 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jeberle <jeberle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/04 13:36:39 by jeberle           #+#    #+#             */
-/*   Updated: 2024/09/04 14:20:09 by jeberle          ###   ########.fr       */
+/*   Created: 2024/09/03 23:02:31 by jeberle           #+#    #+#             */
+/*   Updated: 2024/09/04 14:19:16 by jeberle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
-
 #include "./main.hpp"
-#include "./Contact.hpp"
+#include "./PhoneBook.hpp"
 
-class PhoneBook
+int main(void)
 {
-	private:
-		Contact contacts[8];
-	public:
-		PhoneBook();
-		~PhoneBook();
-
-		void	addContact();
-		void	getContact();
-		void	searchContacts();
-};
-
-
-#endif
+	std::cout << "Hello from Phone Book!" << std::endl;
+	return (0);
+}
