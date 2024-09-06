@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*   phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jonathaneberle <jonathaneberle@student.    +#+  +:+       +#+        */
+/*   By: jeberle <jeberle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 13:14:39 by jeberle           #+#    #+#             */
-/*   Updated: 2024/09/05 16:04:00 by jonathanebe      ###   ########.fr       */
+/*   Updated: 2024/09/06 20:01:09 by jeberle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,31 +126,30 @@ void PhoneBook::addContact()
     int i = 0;
     std::string first_name, last_name, nickname, phone_number, darkest_secret;
 
-    while (!is_valid_input(first_name, false, false))
-    {
+    do {
         std::cout << C"😀> Enter First Name: " D;
         std::getline(std::cin, first_name);
-    }
-    while (!is_valid_input(last_name, false, false))
-    {
+    } while (!is_valid_input(first_name, false, false));
+
+    do {
         std::cout << C"😀> Enter Last Name: " D;
         std::getline(std::cin, last_name);
-    }
-    while (!is_valid_input(nickname, false, false))
-    {
+    } while (!is_valid_input(last_name, false, false));
+
+    do {
         std::cout << C"🤣> Enter Nickname: " D;
         std::getline(std::cin, nickname);
-    }
-    while (!is_valid_phone_number(phone_number))
-    {
+    } while (!is_valid_input(nickname, false, false));
+
+    do {
         std::cout << C"📱> Enter Phone Number: " D;
         std::getline(std::cin, phone_number);
-    }
-    while (!is_valid_input(darkest_secret, false, true))
-    {
+    } while (!is_valid_phone_number(phone_number));
+
+    do {
         std::cout << C"🤐> Enter Darkest Secret: " D;
         std::getline(std::cin, darkest_secret);
-    }
+    } while (!is_valid_input(darkest_secret, false, true));
 
     while (i < CONTACT_MAX)
     {
@@ -165,8 +164,9 @@ void PhoneBook::addContact()
         }
         i++;
     }
-    std::cout << G"Contact added SUCCESSFULLY: " << first_name << ", " << last_name << ", " << nickname << ", " << phone_number << ", " << darkest_secret << "!" << D << std::endl;
+    std::cout << G"Contact added SUCCESSFULLY: " << trim(first_name) << ", " << trim(last_name) << ", " << trim(nickname) << ", " << trim(phone_number) << ", " << trim(darkest_secret) << "!" << D << std::endl;
 }
+
 
 void PhoneBook::searchContacts()
 {
@@ -177,11 +177,11 @@ void PhoneBook::searchContacts()
 
     while (true) {
         std::cout << M << "╔══════════╦══════════╦══════════╦══════════╗" << D << std::endl;
-        std::cout << M << "║" 
-                  << Y << formatColumn("Index", width) << M << "║" 
-                  << D << formatColumn("First Name", width) << M << "║" 
-                  << D << formatColumn("Last Name", width) << M << "║" 
-                  << D << formatColumn("Nickname", width) << M << "║" 
+        std::cout << M << "║"
+                  << Y << formatColumn("Index", width) << M << "║"
+                  << D << formatColumn("First Name", width) << M << "║"
+                  << D << formatColumn("Last Name", width) << M << "║"
+                  << D << formatColumn("Nickname", width) << M << "║"
                   << D << std::endl;
         std::cout << M << line << D << std::endl;
 
