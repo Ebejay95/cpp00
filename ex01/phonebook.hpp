@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jonathaneberle <jonathaneberle@student.    +#+  +:+       +#+        */
+/*   By: jeberle <jeberle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 13:36:39 by jeberle           #+#    #+#             */
-/*   Updated: 2024/09/05 15:40:11 by jonathanebe      ###   ########.fr       */
+/*   Updated: 2024/09/16 11:34:57 by jeberle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class PhoneBook
 {
 	private:
 		Contact contacts[CONTACT_MAX];
+		int		oldest_contact;
 	public:
 		PhoneBook();
 		~PhoneBook();
@@ -28,6 +29,7 @@ class PhoneBook
 		void	getContact();
 		void	searchContacts();
 		bool	isFull() const;
+		int		getFirstEmptyIndex() const;
 };
 
 

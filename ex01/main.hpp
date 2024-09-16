@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jonathaneberle <jonathaneberle@student.    +#+  +:+       +#+        */
+/*   By: jeberle <jeberle@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 23:02:27 by jeberle           #+#    #+#             */
-/*   Updated: 2024/09/05 15:50:07 by jonathanebe      ###   ########.fr       */
+/*   Updated: 2024/09/16 12:19:59 by jeberle          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 # define MAIN_HPP
 
 # include <iostream>
-# include <cstdlib> 
+# include <cstdlib>
 # include <string>
-# include <cctype>
 # include <sstream>
 
 # define RED "\x1b[31m"
@@ -29,7 +28,7 @@
 # define D "\x1b[0m"
 
 #ifndef CONTACT_MAX
-# define CONTACT_MAX 2
+# define CONTACT_MAX 8
 #endif
 
 #endif
